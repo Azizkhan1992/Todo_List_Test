@@ -1,0 +1,172 @@
+body {
+    background-color: #3F72AF;
+    .container {
+        width: 600px;
+        min-height: 450px;
+        margin: 56px auto 0;
+        background-color: #F9F7F7;
+        padding: 20px 55px;
+        border-radius: 20px;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+        .todo__list-header {
+            max-width: 400px;
+            margin: 0 auto 15px;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            padding-bottom: 15px;
+            h3 {
+                text-align: center;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: #112D4E;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 46px;
+                margin: 0 auto 10px;
+            }
+            .todo__list-add {
+                display: flex;
+                margin: 0 auto;
+                margin-top: 12px;
+
+                &.calendar{
+                    width: 298px;
+
+                    .mx-datepicker{
+                        width: 100%;
+                    }
+                }
+                .todo__list-input {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    box-sizing: border-box;
+                }
+                .todo__list-btn {
+                    display: inline;
+                    height: 48px;
+                    width: 48px;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    border-color: #dbe2ef;
+                    outline: #dbe2ef;
+                    cursor: pointer;
+                    background-color: #3F72AF;
+                    color: #fff;
+                    font-size: 32px;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+        .todo__list-list {
+            .todo__list-item {
+                width: 100%;
+                background: #DBE2EF;
+                border-radius: 5px;
+                min-height: 55px;
+                align-items: center;
+                margin-bottom: 30px;
+                display: flex;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .todo__list-checkbox {
+                    width: 20px;
+                    height: 20px;
+                    flex-grow: 1;
+                    cursor: pointer;
+                }
+                .todo__list-title {
+                    display: inline;
+                    margin: 0;
+                    flex-grow: 10;
+                    color: #112D4E;
+                    font-style: normal;
+                }
+                .todo__list-date {
+                    flex-grow: 1;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+input[type="text"] {
+    background-color: #DBE2EF;
+    border: 1px solid rgba(177, 177, 177, 0.4);
+    border-radius: 5px;
+    height: 48px;
+    min-width: 250px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #111;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    &:focus {
+        outline: #94979c;
+    }
+}
+
+.is-invalid {
+    border: 1px solid red!important;
+}
+
+.todo-container{
+
+    .error{
+        width: 100%;
+        height: 80px;
+        background: #f1e92a;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        p{
+            font-size: 1.25rem;
+            line-height: 30px;
+            color: #a4abbd;
+            letter-spacing: 0.025em;
+        }
+    }
+
+    .todo__list-header{
+
+        &.an-error{
+
+            margin-top: 64px;
+        }
+    }
+}
+.mx-calendar{
+    width: 298px !important;
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        width: 340px !important;
+        box-sizing: border-box;
+
+        .todo__list-add{
+
+            input[type="text"]{
+                // width: 150px !important;
+                min-width: 100px !important;
+            }
+
+            &.calendar{
+                width: 198px !important;
+            }
+        }
+    }
+
+    .mx-calendar{
+        width: 200px !important;
+    }
+}
